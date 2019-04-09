@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import GridList from "@material-ui/core/GridList"
 import GridListTile from "@material-ui/core/GridListTile"
 import Image from "../components/image"
-import ImageContentHover from "react-image-hover"
 
 const styles = theme => ({
   root: {
