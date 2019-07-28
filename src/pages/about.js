@@ -4,108 +4,164 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import GridList from "@material-ui/core/GridList"
+import Grid from "@material-ui/core/Grid"
 import GridListTile from "@material-ui/core/GridListTile"
 import Image from "../components/image"
 
-const styles = theme => ({
-  root: {
-    display: `flex`,
-    flexWrap: `wrap`,
-    justifyContent: `space-around`,
-    overflow: `hidden`,
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: 10,
-    height: 10,
-  },
-})
+import styled from "styled-components"
 
-const textStyle = {
-  fontSize: `16px`,
-  lineHeight: `1.8em`,
-  letterSpacing: `.02em`,
-  fontWeight: 400,
-  fontStyle: `normal`,
-  textRendering: `optimizeLegibility`,
-  listStyle: `none`,
-  margin: `0`,
-}
-
-const aboutMe = () => {
+const AboutMe = () => {
   return (
-    <div
-      style={{
-        display: `inline-block`,
-        width: `50%`,
-        height: `500px`,
-        float: `right`,
-      }}
-    >
-      <p style={textStyle}>
+    <React.Fragment>
+      <StyledAboutText className="aboutTitle">About</StyledAboutText>
+      <StyledAboutText className="aboutContent">
         I’ve always sought out opportunities and challenges that are meaningful
-        to me. Although my professional path has taken many twists and turns
+        to me. Although my professional path has taken many twists and turns.
         I've never stopped engaging my passion to help others and solve
         problems. As a web developer, I enjoy using my obsessive attention to
-        detail, my unequivocal love for making things, and my mission-driven
-        work ethic to literally change the world. That's why I’m excited to make
-        a big impact at a high growth company.
-      </p>
-    </div>
+        detail, and my unequivocal love for making things. That's why I’m
+        excited to make a big impact at a high growth company.
+      </StyledAboutText>
+    </React.Fragment>
   )
 }
 
-const skills = () => {
+const SkillSets = () => {
   return (
-    <div style={{ display: `inline-block`, width: `50%` }}>
-      <h6
-        style={{
-          lineHeight: `1.6em`,
-          textTransform: `uppercase`,
-          letterSpacing: `.2em`,
-          textDecoration: `none`,
-          fontWeight: 400,
-          fontStyle: `normal`,
-          color: `#333`,
-        }}
-      >
-        Skillsets
-      </h6>
-      <ul style={textStyle}>
-        <li>HTML / CSS</li>
-        <li>JQuery</li>
-        <li>JavaScripts</li>
-        <li>Node.js</li>
-        <li>React.js</li>
-        <li>Redux.js</li>
-        <li>Ruby On Rails</li>
-        <li>PostgreSQL</li>
-      </ul>
-    </div>
+    <React.Fragment>
+      <StyledAboutText className="aboutTitle">Skillsets</StyledAboutText>
+
+      <Grid container spacing={3}>
+        <Grid item xs={6} sm={6}>
+          <StyledSkillSetsUl>
+            <StyledSkillSetsLi>HTML & CSS</StyledSkillSetsLi>
+            <StyledSkillSetsLi>JavaScripts</StyledSkillSetsLi>
+            <StyledSkillSetsLi>Node.js</StyledSkillSetsLi>
+            <StyledSkillSetsLi>React.js</StyledSkillSetsLi>
+            <StyledSkillSetsLi>Redux.js</StyledSkillSetsLi>
+          </StyledSkillSetsUl>
+        </Grid>
+
+        <Grid item xs={6} sm={6}>
+          <StyledSkillSetsUl>
+            <StyledSkillSetsLi>ApolloQL</StyledSkillSetsLi>
+            <StyledSkillSetsLi>Ruby</StyledSkillSetsLi>
+            <StyledSkillSetsLi>Ruby On Rails</StyledSkillSetsLi>
+            <StyledSkillSetsLi>MongoDB</StyledSkillSetsLi>
+            <StyledSkillSetsLi>PostgreSQL</StyledSkillSetsLi>
+          </StyledSkillSetsUl>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   )
 }
 const About = props => (
   <Layout>
-    <SEO title="Projects" />
-    <div
-      style={{
-        width: `1308px`,
-        display: `table`,
-        margin: `0 auto`,
-        justifyContent: `center`,
-        alignItems: `center`,
-      }}
-    >
-      <img
-        style={{ width: `1308px`, height: `867px` }}
-        src={require("../images/aboutme.jpg")}
-      />
-      <div style={{ width: `100%`, height: `50px` }} />
-      <div>
-        {skills()}
-        {aboutMe()}
-      </div>
-    </div>
+    <StyledContainer>
+      <SEO title="About Me" />
+
+      <Grid container spacing={3}>
+        <Grid item>
+          <StyledImage src={require("../images/aboutme.jpg")} />
+        </Grid>
+        <StyledGridSkillSets item xs={12} sm={6}>
+          <StyledAboutPageDiv>
+            <SkillSets />
+          </StyledAboutPageDiv>
+        </StyledGridSkillSets>
+
+        <StyledGridAbout item xs={12} sm={6}>
+          <StyledAboutPageDiv>
+            <AboutMe />
+          </StyledAboutPageDiv>
+        </StyledGridAbout>
+      </Grid>
+    </StyledContainer>
   </Layout>
 )
 export default About
+
+//Styled
+
+const StyledContainer = styled.div`
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1728;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-content: space-between;
+`
+const StyledImage = styled.img`
+  display: block;
+  margin-bottom:40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: auto;
+  }
+`
+
+const StyledAboutPageDiv = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
+`
+const StyledGridSkillSets = styled(Grid)`
+  padding-left: 20px;
+  padding-right: 20px;
+  order: 2;
+  @media (min-width: 500px) {
+    order: 1;
+  }
+`
+
+const StyledGridAbout = styled(Grid)`
+  padding-left: 20px;
+  padding-right: 20px;
+
+  order: 1;
+  float: right;
+  @media (min-width: 500px) {
+    order: 2;
+  }
+`
+const StyledSkillSetsUl = styled.ul`
+  margin: 0;
+`
+const StyledSkillSetsLi = styled.li`
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  text-rendering: optimizeLegibility;
+  font-size: 1em;
+
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif;
+
+  list-style: none;
+  margin-bottom: 12px;
+`
+
+const StyledAboutText = styled.h6`
+  line-height: 1.8em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif;
+
+  &.aboutTitle {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    line-height: 1.6em;
+    letter-spacing: 0.2em;
+  }
+  &.aboutContent {
+    font-size: 1em;
+  }
+`

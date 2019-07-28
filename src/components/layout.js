@@ -8,9 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
 import "./layout.css"
+import styled from "styled-components"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,17 +26,15 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 1728,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>© {new Date().getFullYear()}, Develop By Victor Tsay</footer>
-        </div>
+        <main>{children}</main>
+
+        <footer>
+          <StyledContainer>
+            <StyledFooterDiv>
+              © {new Date().getFullYear()}, Develop By Victor Tsay
+            </StyledFooterDiv>
+          </StyledContainer>
+        </footer>
       </>
     )}
   />
@@ -47,3 +45,16 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const StyledContainer = styled.div`
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1728;
+  padding: 1.45rem 1.0875rem;
+`
+const StyledFooterDiv = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
+`
