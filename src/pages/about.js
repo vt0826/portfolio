@@ -57,42 +57,30 @@ const SkillSets = () => {
 }
 const About = props => (
   <Layout>
-    <StyledContainer>
-      <SEO title="About Me" />
+    <SEO title="About Me" />
 
-      <Grid container spacing={3}>
-        <Grid item>
-          <StyledImage src={require("../images/aboutme.jpg")} />
-        </Grid>
-        <StyledGridSkillSets item xs={12} sm={6}>
-          <StyledAboutPageDiv>
-            <SkillSets />
-          </StyledAboutPageDiv>
-        </StyledGridSkillSets>
-
-        <StyledGridAbout item xs={12} sm={6}>
-          <StyledAboutPageDiv>
-            <AboutMe />
-          </StyledAboutPageDiv>
-        </StyledGridAbout>
+    <Grid container spacing={3}>
+      <Grid item>
+        <StyledImage src={require("../images/aboutme.jpg")} />
       </Grid>
-    </StyledContainer>
+      <StyledGridSkillSets item xs={12} sm={6}>
+        <StyledAboutPageDiv>
+          <SkillSets />
+        </StyledAboutPageDiv>
+      </StyledGridSkillSets>
+
+      <StyledGridAbout item xs={12} sm={6}>
+        <StyledAboutPageDiv>
+          <AboutMe />
+        </StyledAboutPageDiv>
+      </StyledGridAbout>
+    </Grid>
   </Layout>
 )
 export default About
 
 //Styled
 
-const StyledContainer = styled.div`
-  margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  max-width: 1728;
-  padding: 1.45rem 1.0875rem;
-  display: flex;
-  justify-content: space-between;
-`
 const StyledImage = styled.img`
   display: block;
   margin-bottom:40px;

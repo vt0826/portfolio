@@ -25,9 +25,12 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-
+        <StyledFooterDiv>
+          <Header siteTitle={data.site.siteMetadata.title} />
+        </StyledFooterDiv>
+        <main>
+          <StyledContainer>{children}</StyledContainer>
+        </main>
         <footer>
           <StyledContainer>
             <StyledFooterDiv>
@@ -50,8 +53,8 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
-  max-width: 1728;
+  width: 100%;
+  max-width: 1728px;
   padding: 1.45rem 1.0875rem;
 `
 const StyledFooterDiv = styled.div`

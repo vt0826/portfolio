@@ -62,35 +62,33 @@ const NavBarMobile = () => {
 
 const Header = ({ siteTitle }) => (
   <header>
-    <StyledContainer>
-      <StyledGridContainer container spacing={1}>
-        <Grid item xs={12} sm={5} lg={9}>
-          <StyledHeaderNameDiv>
-            <StyledNavLinkName to="/">{siteTitle}</StyledNavLinkName>
-          </StyledHeaderNameDiv>
-        </Grid>
+    <StyledGridContainer container spacing={1}>
+      <Grid item xs={12} sm={5} lg={9}>
+        <StyledHeaderNameDiv>
+          <StyledNavLinkName to="/">{siteTitle}</StyledNavLinkName>
+        </StyledHeaderNameDiv>
+      </Grid>
 
-        <Grid item xs={12} sm={7} lg={3}>
-          <StyledHeaderDiv>
-            <StyledGridHeaderLink
-              container
-              direction="row"
-              justify="flex-start"
-              alignItems="center"
-            >
-              <NavBar />
-            </StyledGridHeaderLink>
-          </StyledHeaderDiv>
-          {/*
+      <Grid item xs={12} sm={7} lg={3}>
+        <StyledHeaderDiv>
+          <StyledGridHeaderLink
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
+          >
+            <NavBar />
+          </StyledGridHeaderLink>
+        </StyledHeaderDiv>
+        {/*
           <StyledMobileHeaderDiv>
             <StyledGridHeaderMobileLink container>
               <NavBarMobile />
             </StyledGridHeaderMobileLink>
           </StyledMobileHeaderDiv>
           */}
-        </Grid>
-      </StyledGridContainer>
-    </StyledContainer>
+      </Grid>
+    </StyledGridContainer>
   </header>
 )
 
@@ -103,15 +101,6 @@ Header.defaultProps = {
 }
 
 export default Header
-
-const StyledContainer = styled.div`
-  margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  max-width: 1728;
-  padding: 1.45rem 1.0875rem;
-`
 
 const StyledGridContainer = styled(Grid)`
   display: flex;
