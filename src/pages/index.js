@@ -139,7 +139,7 @@ const Inventory = () => {
 const IndexPage = () => (
   <Layout>
     <SEO title="Projects" />
-    <Grid container spacing={10}>
+    <Grid container>
       <Grid item xs={12} sm={6}>
         <StyledProjectDiv>
           <Order />
