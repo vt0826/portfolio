@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import styled from "styled-components"
+import { Container } from "@material-ui/core"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,18 +26,19 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <StyledFooterDiv>
+        <Container maxWidth="lg">
           <Header siteTitle={data.site.siteMetadata.title} />
-        </StyledFooterDiv>
+        </Container>
+
         <main>
-          <StyledContainer>{children}</StyledContainer>
+          <Container maxWidth="lg"> {children}</Container>
         </main>
         <footer>
-          <StyledContainer>
-            <StyledFooterDiv>
+          <Container maxWidth="lg">
+            <StyledFooterText>
               © {new Date().getFullYear()}, Develop By Victor Tsay
-            </StyledFooterDiv>
-          </StyledContainer>
+            </StyledFooterText>
+          </Container>
         </footer>
       </>
     )}
@@ -49,15 +51,15 @@ Layout.propTypes = {
 
 export default Layout
 
-const StyledContainer = styled.div`
-  margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 1728px;
-  padding: 1.45rem 1.0875rem;
-`
-const StyledFooterDiv = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
+const StyledFooterText = styled.h6`
+  font-size: 0.8em;
+  text-align: left;
+  line-height: 1.6em;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif;
+  color: black;
 `

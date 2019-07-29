@@ -16,11 +16,12 @@ const Order = () => {
           src={require("../images/order.png")}
         />
       </a>
-      <StyledProjectTitleDiv>
-        <StyledProjectName>Order </StyledProjectName>
-      </StyledProjectTitleDiv>
 
       <StyleMiddleWrapper className="middleWarpper">
+        <StyledProjectTitleDiv>
+          <StyledProjectName>Order </StyledProjectName>
+        </StyledProjectTitleDiv>
+
         <StyledDescriptionText classsName="descriptionText">
           A mobile first design platform that can help family and friends to
           order a batch of goods as a group.
@@ -60,10 +61,11 @@ const Property = () => {
           src={require("../images/property.png")}
         />
       </a>
-      <StyledProjectTitleDiv>
-        <StyledProjectName>Property </StyledProjectName>
-      </StyledProjectTitleDiv>
       <StyleMiddleWrapper className="middleWarpper">
+        <StyledProjectTitleDiv>
+          <StyledProjectName>Property </StyledProjectName>
+        </StyledProjectTitleDiv>
+
         <StyledDescriptionText classsName="descriptionText">
           A quick and esay way to find out your property's worth
         </StyledDescriptionText>
@@ -102,11 +104,12 @@ const Inventory = () => {
           src={require("../images/inventory.png")}
         />
       </a>
-      <StyledProjectTitleDiv>
-        <StyledProjectName>Inventory </StyledProjectName>
-      </StyledProjectTitleDiv>
 
       <StyleMiddleWrapper className="middleWarpper">
+        <StyledProjectTitleDiv>
+          <StyledProjectName>Inventory </StyledProjectName>
+        </StyledProjectTitleDiv>
+
         <StyledDescriptionText classsName="descriptionText">
           online inventory management to help you take control of your business
         </StyledDescriptionText>
@@ -139,7 +142,7 @@ const Inventory = () => {
 const IndexPage = () => (
   <Layout>
     <SEO title="Projects" />
-    <Grid container>
+    <Grid container spacing={6}>
       <Grid item xs={12} sm={6}>
         <StyledProjectDiv>
           <Order />
@@ -178,10 +181,7 @@ const StyledProjectContainer = styled.div`
   }
 `
 
-const StyledProjectDiv = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
-`
+const StyledProjectDiv = styled.div``
 const StyledProjectTitleDiv = styled.div`
   text-align: center;
 `

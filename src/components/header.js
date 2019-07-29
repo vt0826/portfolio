@@ -35,58 +35,22 @@ const NavBar = () => {
   )
 }
 
-const NavBarMobile = () => {
-  return (
-    <React.Fragment>
-      <Grid item xs={4}>
-        <StyledNavLink to="/" activeClassName="active">
-          P
-        </StyledNavLink>
-      </Grid>
-
-      <Grid item xs={4}>
-        <StyledNavLink to="/about" activeClassName="active">
-          A
-        </StyledNavLink>
-      </Grid>
-
-      <Grid item xs={4}>
-        <StyledEmailLink href="mailto:vt0826@gmail.com">G</StyledEmailLink>
-      </Grid>
-      <Grid item xs={4}>
-        <StyledEmailLink href="mailto:vt0826@gmail.com">C</StyledEmailLink>
-      </Grid>
-    </React.Fragment>
-  )
-}
-
 const Header = ({ siteTitle }) => (
   <header>
-    <StyledGridContainer container spacing={1}>
-      <Grid item xs={12} sm={5} lg={9}>
-        <StyledHeaderNameDiv>
-          <StyledNavLinkName to="/">{siteTitle}</StyledNavLinkName>
-        </StyledHeaderNameDiv>
+    <StyledGridContainer container>
+      <Grid item xs={12} sm={6} md={8} lg={9}>
+        <StyledNavLinkName to="/">{siteTitle}</StyledNavLinkName>
       </Grid>
 
-      <Grid item xs={12} sm={7} lg={3}>
-        <StyledHeaderDiv>
-          <StyledGridHeaderLink
-            container
-            direction="row"
-            justify="flex-start"
-            alignItems="center"
-          >
-            <NavBar />
-          </StyledGridHeaderLink>
-        </StyledHeaderDiv>
-        {/*
-          <StyledMobileHeaderDiv>
-            <StyledGridHeaderMobileLink container>
-              <NavBarMobile />
-            </StyledGridHeaderMobileLink>
-          </StyledMobileHeaderDiv>
-          */}
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <StyledGridHeaderLink
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="center"
+        >
+          <NavBar />
+        </StyledGridHeaderLink>
       </Grid>
     </StyledGridContainer>
   </header>
@@ -103,38 +67,18 @@ Header.defaultProps = {
 export default Header
 
 const StyledGridContainer = styled(Grid)`
+  margin-top: 40px;
+
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 `
-const StyledHeaderNameDiv = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
-`
-const StyledGridHeaderLink = styled(Grid)`
-  padding-left: 20px;
-  padding-right: 20px;
 
+const StyledGridHeaderLink = styled(Grid)`
   width: 100%;
   direction: row;
   display: flex;
   justify-content: space-between;
-`
-const StyledGridHeaderMobileLink = styled(Grid)`
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
-`
-const StyledHeaderDiv = styled.div`
-  display: inline;
-  @media (min-width: 500px) {
-    display: inline;
-  }
-`
-const StyledMobileHeaderDiv = styled.div`
-  display: none;
-  @media (min-width: 500px) {
-    display: none;
-  }
 `
 
 const StyledNavLinkName = styled(Link)`
@@ -149,14 +93,15 @@ const StyledNavLinkName = styled(Link)`
   font-weight: 400;
   font-style: normal;
   font-family: "Open Sans", sans-serif;
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     font-size: 1em;
   }
 `
 const StyledNavLink = styled(Link)`
+  margin-top: 12px;
   font-size: 0.7em;
   display: block;
-
+  margin-top: 12px;
   text-align: right;
   text-transform: none;
   text-decoration: none;
@@ -167,11 +112,14 @@ const StyledNavLink = styled(Link)`
   font-family: "Open Sans", sans-serif;
   color: #aaa;
 
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     font-size: 1em;
+
+    margin-top: 0;
   }
 `
 const StyledEmailLink = styled.a`
+  margin-top: 12px;
   font-size: 0.7em;
   display: block;
   text-align: right;
@@ -184,7 +132,9 @@ const StyledEmailLink = styled.a`
   font-family: "Open Sans", sans-serif;
   color: #aaa;
 
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     font-size: 1em;
+
+    margin-top: 0;
   }
 `

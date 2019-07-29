@@ -35,17 +35,17 @@ const SkillSets = () => {
         <Grid item xs={6} sm={6}>
           <StyledSkillSetsUl>
             <StyledSkillSetsLi>HTML & CSS</StyledSkillSetsLi>
-            <StyledSkillSetsLi>JavaScripts</StyledSkillSetsLi>
-            <StyledSkillSetsLi>Node.js</StyledSkillSetsLi>
-            <StyledSkillSetsLi>React.js</StyledSkillSetsLi>
-            <StyledSkillSetsLi>Redux.js</StyledSkillSetsLi>
+            <StyledSkillSetsLi>JavaScripts ES6</StyledSkillSetsLi>
+            <StyledSkillSetsLi>NodeJs</StyledSkillSetsLi>
+            <StyledSkillSetsLi>ReactJs</StyledSkillSetsLi>
+            <StyledSkillSetsLi>Redux</StyledSkillSetsLi>
           </StyledSkillSetsUl>
         </Grid>
 
         <Grid item xs={6} sm={6}>
           <StyledSkillSetsUl>
-            <StyledSkillSetsLi>ApolloQL</StyledSkillSetsLi>
-            <StyledSkillSetsLi>Ruby</StyledSkillSetsLi>
+            <StyledSkillSetsLi>Apollo QL</StyledSkillSetsLi>
+            <StyledSkillSetsLi>Graph QL</StyledSkillSetsLi>
             <StyledSkillSetsLi>Ruby On Rails</StyledSkillSetsLi>
             <StyledSkillSetsLi>MongoDB</StyledSkillSetsLi>
             <StyledSkillSetsLi>PostgreSQL</StyledSkillSetsLi>
@@ -64,15 +64,11 @@ const About = props => (
         <StyledImage src={require("../images/aboutme.jpg")} />
       </Grid>
       <StyledGridSkillSets item xs={12} sm={6}>
-        <StyledAboutPageDiv>
-          <SkillSets />
-        </StyledAboutPageDiv>
+        <SkillSets />
       </StyledGridSkillSets>
 
       <StyledGridAbout item xs={12} sm={6}>
-        <StyledAboutPageDiv>
-          <AboutMe />
-        </StyledAboutPageDiv>
+        <AboutMe />
       </StyledGridAbout>
     </Grid>
   </Layout>
@@ -84,33 +80,22 @@ export default About
 const StyledImage = styled.img`
   display: block;
   margin-bottom:40px;
-  padding-left: 20px;
-  padding-right: 20px;
   width: 100%;
   height: auto;
   }
 `
 
-const StyledAboutPageDiv = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
-`
 const StyledGridSkillSets = styled(Grid)`
-  padding-left: 20px;
-  padding-right: 20px;
   order: 2;
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     order: 1;
   }
 `
 
 const StyledGridAbout = styled(Grid)`
-  padding-left: 20px;
-  padding-right: 20px;
-
   order: 1;
   float: right;
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     order: 2;
   }
 `

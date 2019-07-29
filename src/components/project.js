@@ -161,9 +161,9 @@ class Project extends React.Component {
 
   render() {
     return (
-      <StyledContainer>
+      <React.Fragment>
         <SEO title="Projects" />
-        <Grid container spacing={10}>
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <StyledProjectDiv>
               <Order />
@@ -180,7 +180,7 @@ class Project extends React.Component {
             </StyledProjectDiv>
           </Grid>
         </Grid>
-      </StyledContainer>
+      </React.Fragment>
     )
   }
 }
