@@ -7,47 +7,39 @@ import Project from "../components/project"
 import { withStyles } from "@material-ui/core/styles"
 import styled from "styled-components"
 
+import { Link } from "gatsby"
 const Order = () => {
   return (
     <StyledProjectContainer>
+      <StyledMiddleContainer>
+        <StyleMiddleWrapper className="middleWarpper">
+          <StyledProjectTitleDiv>
+            <StyledProjectName>Order </StyledProjectName>
+          </StyledProjectTitleDiv>
+
+          <StyledDescriptionText classsName="descriptionText">
+            help family and friends to order a batch of goods as a group.
+          </StyledDescriptionText>
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
+          >
+            <Grid item xs={12}>
+              <StyledProjectLink href="http://order.thyhive.com">
+                Go To Site
+              </StyledProjectLink>
+            </Grid>
+          </Grid>
+        </StyleMiddleWrapper>
+      </StyledMiddleContainer>
       <a href="http://order.thyhive.com">
         <StyledImage
           className="webImage"
           src={require("../images/order.png")}
         />
       </a>
-
-      <StyleMiddleWrapper className="middleWarpper">
-        <StyledProjectTitleDiv>
-          <StyledProjectName>Order </StyledProjectName>
-        </StyledProjectTitleDiv>
-
-        <StyledDescriptionText classsName="descriptionText">
-          A mobile first design platform that can help family and friends to
-          order a batch of goods as a group.
-        </StyledDescriptionText>
-        <Grid container>
-          <StyledGridButton xs={6}>
-            <StyledButton
-              size="small"
-              variant="outlined"
-              href="http://order.thyhive.com"
-            >
-              Go To Site
-            </StyledButton>
-          </StyledGridButton>
-
-          <StyledGridButton xs={6}>
-            <StyledButton
-              size="small"
-              variant="outlined"
-              href="#outlined-buttons"
-            >
-              GitHub
-            </StyledButton>
-          </StyledGridButton>
-        </Grid>
-      </StyleMiddleWrapper>
     </StyledProjectContainer>
   )
 }
@@ -55,42 +47,41 @@ const Order = () => {
 const Property = () => {
   return (
     <StyledProjectContainer>
+      <StyledMiddleContainer>
+        <StyleMiddleWrapper className="middleWarpper">
+          <StyledProjectTitleDiv>
+            <StyledProjectName>Property </StyledProjectName>
+          </StyledProjectTitleDiv>
+
+          <StyledDescriptionText classsName="descriptionText">
+            A quick and esay way to find out your property's worth
+          </StyledDescriptionText>
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
+          >
+            <Grid item xs={6}>
+              <StyledProjectLink href="https://musing-lamarr-e2a2c5.netlify.com/">
+                Go To Site
+              </StyledProjectLink>
+            </Grid>
+
+            <Grid item xs={6}>
+              <StyledProjectLink href="https://github.com/vt0826/property">
+                GitHub
+              </StyledProjectLink>
+            </Grid>
+          </Grid>
+        </StyleMiddleWrapper>
+      </StyledMiddleContainer>
       <a href="https://musing-lamarr-e2a2c5.netlify.com/">
         <StyledImage
           className="webImage"
           src={require("../images/property.png")}
         />
       </a>
-      <StyleMiddleWrapper className="middleWarpper">
-        <StyledProjectTitleDiv>
-          <StyledProjectName>Property </StyledProjectName>
-        </StyledProjectTitleDiv>
-
-        <StyledDescriptionText classsName="descriptionText">
-          A quick and esay way to find out your property's worth
-        </StyledDescriptionText>
-        <Grid container>
-          <StyledGridButton xs={6}>
-            <StyledButton
-              size="small"
-              variant="outlined"
-              href="http://order.thyhive.com"
-            >
-              Go To Site
-            </StyledButton>
-          </StyledGridButton>
-
-          <StyledGridButton xs={6}>
-            <StyledButton
-              size="small"
-              variant="outlined"
-              href="#outlined-buttons"
-            >
-              GitHub
-            </StyledButton>
-          </StyledGridButton>
-        </Grid>
-      </StyleMiddleWrapper>
     </StyledProjectContainer>
   )
 }
@@ -98,43 +89,42 @@ const Property = () => {
 const Inventory = () => {
   return (
     <StyledProjectContainer>
+      <StyledMiddleContainer>
+        <StyleMiddleWrapper className="middleWarpper">
+          <StyledProjectTitleDiv>
+            <StyledProjectName>Inventory </StyledProjectName>
+          </StyledProjectTitleDiv>
+
+          <StyledDescriptionText classsName="descriptionText">
+            online inventory management to help you take control of your
+            business
+          </StyledDescriptionText>
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
+          >
+            <Grid item xs={6}>
+              <StyledProjectLink href="https://github.com/vt0826/inventory">
+                Go To Site
+              </StyledProjectLink>
+            </Grid>
+
+            <Grid item xs={6}>
+              <StyledProjectLink href="https://github.com/vt0826/inventory">
+                GitHub
+              </StyledProjectLink>
+            </Grid>
+          </Grid>
+        </StyleMiddleWrapper>
+      </StyledMiddleContainer>
       <a href="https://musing-lamarr-e2a2c5.netlify.com/">
         <StyledImage
           className="webImage"
           src={require("../images/inventory.png")}
         />
       </a>
-
-      <StyleMiddleWrapper className="middleWarpper">
-        <StyledProjectTitleDiv>
-          <StyledProjectName>Inventory </StyledProjectName>
-        </StyledProjectTitleDiv>
-
-        <StyledDescriptionText classsName="descriptionText">
-          online inventory management to help you take control of your business
-        </StyledDescriptionText>
-        <Grid container>
-          <StyledGridButton xs={6}>
-            <StyledButton
-              size="small"
-              variant="outlined"
-              href="http://order.thyhive.com"
-            >
-              Go To Site
-            </StyledButton>
-          </StyledGridButton>
-
-          <StyledGridButton xs={6}>
-            <StyledButton
-              size="small"
-              variant="outlined"
-              href="#outlined-buttons"
-            >
-              GitHub
-            </StyledButton>
-          </StyledGridButton>
-        </Grid>
-      </StyleMiddleWrapper>
     </StyledProjectContainer>
   )
 }
@@ -173,11 +163,8 @@ export default IndexPage
 const StyledProjectContainer = styled.div`
   position: relative;
   width: 100%;
-  :hover .webImage {
-    opacity: 0.5;
-  }
   :hover > .middleWarpper {
-    opacity: 0.5;
+    opacity: 1;
   }
 `
 
@@ -197,20 +184,14 @@ const StyledProjectName = styled.h3`
   color: rgb(79, 79, 79);
 `
 
+const StyledMiddleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 const StyleMiddleWrapper = styled.div`
-  transition: 0.5s ease;
-  height: 35%;
-
-  text-align: center;
-
+  margin: auto;
   @media (min-width: 500px) {
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    opacity: 0;
+    margin-bottom: 12px;
   }
 `
 const StyledImage = styled.img`
@@ -221,6 +202,11 @@ const StyledImage = styled.img`
   height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
+  @media (min-width: 600px) {
+    :hover {
+      opacity: 0.8;
+    }
+  }
 `
 const StyledDescriptionText = styled.div`
   margin-bottom: 8px;
@@ -234,21 +220,45 @@ const StyledDescriptionText = styled.div`
   font-style: normal;
   font-family: "Open Sans", sans-serif;
   color: rgb(79, 79, 79);
-
-  @media (min-width: 500px) {
-    color: white;
-
-    padding: 16px 32px;
-  }
 `
 const StyledGridButton = styled(Grid)`
   display: block;
+  width: 100%;
 `
 const StyledButton = styled(Button)`
   color: white;
-  margin: 40px;
-
+  margin: 100px;
   @media (min-width: 500px) {
     color: black;
+  }
+  .gitHubButton {
+    float: right;
+  }
+`
+const StyledProjectLink = styled.a`
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-size: 0.7em;
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1em;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  :hover > .webImage {
+    opacity: 0.5;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 0.8em;
+    margin-top: 0;
+    :hover {
+      -webkit-transform: scale(1.1);
+    }
   }
 `

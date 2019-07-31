@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
         <footer>
           <Container maxWidth="lg">
             <StyledFooterText>
-              © {new Date().getFullYear()}, Develop By Victor Tsay
+              © {new Date().getFullYear()}, Developed By Victor Tsay
             </StyledFooterText>
           </Container>
         </footer>
@@ -52,6 +52,7 @@ Layout.propTypes = {
 export default Layout
 
 const StyledFooterText = styled.h6`
+  margin-top: 20px;
   font-size: 0.8em;
   text-align: left;
   line-height: 1.6em;

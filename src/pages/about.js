@@ -103,12 +103,12 @@ const StyledSkillSetsUl = styled.ul`
   margin: 0;
 `
 const StyledSkillSetsLi = styled.li`
-  line-height: 1.5em;
+  line-height: 1.8em;
   letter-spacing: 0.02em;
   text-decoration: none;
 
   text-rendering: optimizeLegibility;
-  font-size: 1em;
+  font-size: 0.9em;
 
   font-weight: 400;
   font-style: normal;
@@ -119,6 +119,7 @@ const StyledSkillSetsLi = styled.li`
 `
 
 const StyledAboutText = styled.h6`
+  margin-bottom: 16px;
   line-height: 1.8em;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -129,7 +130,6 @@ const StyledAboutText = styled.h6`
   font-family: "Open Sans", sans-serif;
 
   &.aboutTitle {
-    margin-bottom: 16px;
     text-transform: uppercase;
     line-height: 1.6em;
     letter-spacing: 0.2em;

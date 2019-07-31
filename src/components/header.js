@@ -114,8 +114,10 @@ const StyledNavLink = styled(Link)`
 
   @media (min-width: 600px) {
     font-size: 1em;
-
     margin-top: 0;
+    :hover {
+      -webkit-transform: scale(1.1);
+    }
   }
 `
 const StyledEmailLink = styled.a`
@@ -134,7 +136,9 @@ const StyledEmailLink = styled.a`
 
   @media (min-width: 600px) {
     font-size: 1em;
-
     margin-top: 0;
+    :hover {
+      -webkit-transform: scale(1.1);
+    }
   }
 `
