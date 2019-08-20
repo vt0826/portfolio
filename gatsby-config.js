@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Victor Tsay`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Portfolio`,
     author: `Victor Tsay`,
   },
   plugins: [
@@ -24,7 +24,15 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/my-icon.jpg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar-tracking`,
+      options: {
+        includeInDevelopment: false,
+        id: 1451253,
+        sv: 6,
       },
     },
 
