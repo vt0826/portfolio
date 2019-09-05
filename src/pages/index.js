@@ -86,6 +86,42 @@ const Property = () => {
   )
 }
 
+const Catmint = () => {
+  return (
+    <StyledProjectContainer>
+      <StyledMiddleContainer>
+        <StyleMiddleWrapper className="middleWarpper">
+          <StyledProjectTitleDiv>
+            <StyledProjectName>Catmint Wheel Cake </StyledProjectName>
+          </StyledProjectTitleDiv>
+
+          <StyledDescriptionText classsName="descriptionText">
+            Website for local desert store.
+          </StyledDescriptionText>
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
+          >
+            <Grid item xs={12}>
+              <StyledProjectLink href="https://www.catmintwheelcake.com">
+                Go To Site
+              </StyledProjectLink>
+            </Grid>
+          </Grid>
+        </StyleMiddleWrapper>
+      </StyledMiddleContainer>
+      <a href="https://www.catmintwheelcake.com">
+        <StyledImage
+          className="webImage"
+          src={require("../images/catmint.png")}
+        />
+      </a>
+    </StyledProjectContainer>
+  )
+}
+
 const Inventory = () => {
   return (
     <StyledProjectContainer>
@@ -105,13 +141,7 @@ const Inventory = () => {
             justify="flex-start"
             alignItems="center"
           >
-            <Grid item xs={6}>
-              <StyledProjectLink href="https://github.com/vt0826/inventory">
-                Go To Site
-              </StyledProjectLink>
-            </Grid>
-
-            <Grid item xs={6}>
+            <Grid item xs={12}>
               <StyledProjectLink href="https://github.com/vt0826/inventory">
                 GitHub
               </StyledProjectLink>
@@ -141,6 +171,11 @@ const IndexPage = () => (
       <Grid item xs={12} sm={6}>
         <StyledProjectDiv>
           <Property />
+        </StyledProjectDiv>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <StyledProjectDiv>
+          <Catmint />
         </StyledProjectDiv>
       </Grid>
       <Grid item xs={12} sm={6}>
