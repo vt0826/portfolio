@@ -86,42 +86,6 @@ const Property = () => {
   )
 }
 
-const Catmint = () => {
-  return (
-    <StyledProjectContainer>
-      <StyledMiddleContainer>
-        <StyleMiddleWrapper className="middleWarpper">
-          <StyledProjectTitleDiv>
-            <StyledProjectName>Catmint Wheel Cake </StyledProjectName>
-          </StyledProjectTitleDiv>
-
-          <StyledDescriptionText classsName="descriptionText">
-            Website for local desert store.
-          </StyledDescriptionText>
-          <Grid
-            container
-            direction="row"
-            justify="flex-start"
-            alignItems="center"
-          >
-            <Grid item xs={12}>
-              <StyledProjectLink href="https://www.catmintwheelcake.com">
-                Go To Site
-              </StyledProjectLink>
-            </Grid>
-          </Grid>
-        </StyleMiddleWrapper>
-      </StyledMiddleContainer>
-      <a href="https://www.catmintwheelcake.com">
-        <StyledImage
-          className="webImage"
-          src={require("../images/catmint.png")}
-        />
-      </a>
-    </StyledProjectContainer>
-  )
-}
-
 const Inventory = () => {
   return (
     <StyledProjectContainer>
@@ -175,20 +139,10 @@ const IndexPage = () => (
       </Grid>
       <Grid item xs={12} sm={6}>
         <StyledProjectDiv>
-          <Catmint />
-        </StyledProjectDiv>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <StyledProjectDiv>
           <Inventory />
         </StyledProjectDiv>
       </Grid>
     </Grid>
-
-    {/*
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Project />
-    */}
   </Layout>
 )
 
